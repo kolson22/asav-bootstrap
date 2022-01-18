@@ -12,7 +12,7 @@ Modify the './templates/asa.jinja2' file to match the configuration you like'
 ## How to use once configured
 
 ``` bash
-configurator.py -a 10.0.0.1 -m 255.255.255.0 -g 10.0.0.254 -n test-firewall -v 9.7.1 -f test-firewall.iso -s 8.8.8.8 -t 1G
+python3 configurator.py -a 10.0.0.1 -m 255.255.255.0 -g 10.0.0.254 -n test-firewall -v 9.7.1 -f test-firewall.iso -s 8.8.8.8 -t 1G
 ```
 
 - "-a" or "--address" is for the outside IP address of GigabitEthernet0/0
