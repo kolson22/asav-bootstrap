@@ -5,6 +5,8 @@ except ImportError:
     print("you need to make sure pycdlib and argparse are installed")
 
 import os
+
+test_filename = "./test.txt"
 parser = argparse.ArgumentParser()
 parser.add_argument("-a", "--address",
                     help="The IP address of the firewall",
@@ -24,8 +26,8 @@ f.close()
 
 iso = pycdlib.PyCdlib()
 iso.new(joliet=3)
-iso.add_file("test.txt", joliet_path="/test.txt")
+iso.add_file(test_filename, joliet_path="/test.txt")
 iso.write(args.filename)
 iso.close()
 
-os.remove("./test.txt")
+os.remove(test_filename)
